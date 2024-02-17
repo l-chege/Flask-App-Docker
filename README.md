@@ -12,12 +12,13 @@ Before running the application:
 
 ### To run the Flask app locally:
 
-**Clone this repository to your local machine.**
-
-    ```bash
-    git clone <repository-url>
+**Clone this repository to your local machine:**
+1. Clone the repository to your local machine.
+   ```bash
+   git clone 'repository-url'
+2. Navigate to project directory
+   ```bash
     cd flask_docker_project
-    ```
 
  **Open a terminal or command prompt and navigate to the project directory.**
 
@@ -34,7 +35,7 @@ Before running the application:
 
 ## Advanced Features
 
-1. CI Integration
+1. **CI Integration**
 
 Workflow is triggered on two events:
 - Push to Main Branch: Any push event to the main branch triggers the workflow, ensuring CI/CD is executed for new changes.
@@ -45,8 +46,7 @@ Tasks performed by CI/CD workflow
 - Build Docker Image
 - Push built Docker Image to Docker Registry
 
-2. Scheduled routines (optional)
+2. **Scheduled routines (optional)**
 
-- Workflow is set to run every Monday at 8AM. Cron Expression Generator is used to schedule workflows to run at a specific time/interval. 
-
-3. 
+- Workflow is set to run every Monday at 8AM. [Cron Expression Generator](https://www.atatus.com/tools/cron)
+ is used to schedule workflows to run at a specific time/interval. 
