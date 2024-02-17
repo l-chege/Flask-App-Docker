@@ -10,28 +10,43 @@ Before running the application:
 
 - Have Docker installed: [Docker Installation Guide](https://docs.docker.com/get-docker/)
 
-### To run the Flask application locally:
+### To run the Flask app locally:
 
-1. Clone this repository to your local machine.
+**Clone this repository to your local machine.**
 
     ```bash
     git clone <repository-url>
     cd flask_docker_project
     ```
 
-2. Open a terminal or command prompt and navigate to the project directory.
+ **Open a terminal or command prompt and navigate to the project directory.**
 
-- **To build Docker image:**
+1. To build Docker image: 
+   ```bash
+   docker build -t flask-app .
 
-```bash
-docker build -t flask-app .
+2. To run Docker image:
+   ```bash
+   docker run -d -p 5000:80 --name flask-container flask-app 
 
-- **To run Docker image:**
+3. To access flask app
+   Open http://localhost:5000 in your web browser; flask app runs in docker container
 
-```bash
-docker run -d -p 5000:80 --name flask-container flask-app 
+## Advanced Features
 
-- **To access flask app**
+1. CI Integration
 
-Open http://localhost:5000 in your web browser; flask app runs in docker container
+Workflow is triggered on two events:
+- Push to Main Branch: Any push event to the main branch triggers the workflow, ensuring CI/CD is executed for new changes.
+- Scheduled Run: Workflow runs every Monday at 8:00 AM, providing regular maintenance and updates.
 
+Tasks performed by CI/CD workflow
+- Run tests
+- Build Docker Image
+- Push built Docker Image to Docker Registry
+
+2. Scheduled routines (optional)
+
+- Workflow is set to run every Monday at 8AM. Cron Expression Generator is used to schedule workflows to run at a specific time/interval. 
+
+3. 
