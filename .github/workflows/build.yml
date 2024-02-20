@@ -41,8 +41,5 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
          
             - name: Push Docker image
-              env:
-                DOCKER_IMAGE: lauchege/flask-app:latest
               run: |
-                echo "DOCKER_IMAGE=lauchege/flask-app:latest" >> $GITHUB_STATE
-                docker push $DOCKER_IMAGE
+                docker push flask-app
