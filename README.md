@@ -31,7 +31,7 @@ Before running the application:
    docker run -d -p 5000:80 --name flask-container flask-app 
 
 3. To access flask app
-   Open http://localhost:5000 in your web browser; flask app runs in docker container
+- Open http://localhost:5000 in your web browser; flask app runs in docker container
 
 ## Advanced Features
 
