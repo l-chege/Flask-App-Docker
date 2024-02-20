@@ -43,4 +43,4 @@ jobs:
          
             - name: Push Docker image
               run: |
-                docker push flask-app:latest
+                docker push lauchege/flask-app:latest
